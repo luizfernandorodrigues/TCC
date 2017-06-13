@@ -61,6 +61,12 @@
     <Compile Include="FormA22Cadastro.Designer.cs">
       <DependentUpon>FormA22Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMestre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,8 +76,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validacao.cs" />
-    <EmbeddedResource Include="FormA22Cadastro.resx">
-      <DependentUpon>FormA22Cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMestre.resx">
       <DependentUpon>FormMestre.cs</DependentUpon>
@@ -84,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -108,6 +115,68 @@
       <Project>{532115e7-07a2-4a4c-86ad-f5253da77120}</Project>
       <Name>Repositorio.Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagens\Add Image_25px.png" />
+    <Content Include="Imagens\Add List_15px.png" />
+    <Content Include="Imagens\Add List_25px.png" />
+    <Content Include="Imagens\Add Shopping Cart_25px.png" />
+    <Content Include="Imagens\Add Shopping Cart_25px_1.png" />
+    <Content Include="Imagens\Air Pilot Hat_25px_1.png" />
+    <Content Include="Imagens\banknotes_25px.png" />
+    <Content Include="Imagens\Book Stack_25px.png" />
+    <Content Include="Imagens\Box_25px.png" />
+    <Content Include="Imagens\Buy_25px_5.png" />
+    <Content Include="Imagens\card_in_use_25px.png" />
+    <Content Include="Imagens\Checked Checkbox_25px.png" />
+    <Content Include="Imagens\Circled Right 2_15px.png" />
+    <Content Include="Imagens\curriculum_25px.png" />
+    <Content Include="Imagens\Delete Property_15px.png" />
+    <Content Include="Imagens\Delete_25px.png" />
+    <Content Include="Imagens\document_25px_1.png" />
+    <Content Include="Imagens\Down 2_25px.png" />
+    <Content Include="Imagens\Down 3_25px.png" />
+    <Content Include="Imagens\Edit Property_15px.png" />
+    <Content Include="Imagens\Edit_25px.png" />
+    <None Include="Imagens\right_round_25px.png" />
+    <None Include="Imagens\left_round_25px.png" />
+    <None Include="Imagens\end_25px.png" />
+    <Content Include="Imagens\Exit_25px.png" />
+    <Content Include="Imagens\Globe_25px.png" />
+    <Content Include="Imagens\Handshake_25px.png" />
+    <Content Include="Imagens\Invert Selection_25px.png" />
+    <Content Include="Imagens\jmti.ico" />
+    <Content Include="Imagens\key_security_25px.png" />
+    <Content Include="Imagens\Library_25px.png" />
+    <Content Include="Imagens\Long Arrow Left_25px.png" />
+    <Content Include="Imagens\Long Arrow Right_25px.png" />
+    <Content Include="Imagens\Manager_25px.png" />
+    <Content Include="Imagens\Map Marker_25px.png" />
+    <Content Include="Imagens\Marker_25px.png" />
+    <Content Include="Imagens\Message_25px.png" />
+    <Content Include="Imagens\Move by Trolley_25px.png" />
+    <Content Include="Imagens\MS Excel_25px_1.png" />
+    <Content Include="Imagens\Organization_25px.png" />
+    <Content Include="Imagens\Page Overview _15px.png" />
+    <Content Include="Imagens\Permanent Job_25px.png" />
+    <None Include="Imagens\skip_to_start_25px.png" />
+    <None Include="Imagens\Pesquisasearch_25px.png" />
+    <Content Include="Imagens\Plus_25px.png" />
+    <Content Include="Imagens\Point Objects_25px.png" />
+    <Content Include="Imagens\Purchase Order_25px.png" />
+    <Content Include="Imagens\Report Card_25px.png" />
+    <Content Include="Imagens\Rotate Left_25px.png" />
+    <Content Include="Imagens\Save_25px.png" />
+    <Content Include="Imagens\Search_15px_1.png" />
+    <Content Include="Imagens\Search_25px.png" />
+    <Content Include="Imagens\Sorting Arrows_25px.png" />
+    <Content Include="Imagens\Stack_25px.png" />
+    <Content Include="Imagens\Unchecked Checkbox_25px.png" />
+    <Content Include="Imagens\Uninstalling Updates_25px_1.png" />
+    <Content Include="Imagens\US Dollar_25px.png" />
+    <Content Include="Imagens\Warehouse_25px.png" />
+    <Content Include="Imagens\Worldwide Location_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

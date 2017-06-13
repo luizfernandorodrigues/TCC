@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class FormMestre : Form
+    public partial class FormBase : Form
     {
-        public FormMestre()
+        public FormBase()
         {
             InitializeComponent();
-        }
-
-        private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
