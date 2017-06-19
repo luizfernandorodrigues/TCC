@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>jmti.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -76,6 +79,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="FormA22Cadastro.resx">
+      <DependentUpon>FormA22Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,7 @@
     <Content Include="Imagens\Down 3_25px.png" />
     <Content Include="Imagens\Edit Property_15px.png" />
     <Content Include="Imagens\Edit_25px.png" />
+    <Content Include="jmti.ico" />
     <None Include="Imagens\right_round_25px.png" />
     <None Include="Imagens\left_round_25px.png" />
     <None Include="Imagens\end_25px.png" />

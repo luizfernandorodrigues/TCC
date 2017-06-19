@@ -14,5 +14,10 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
+
+        private void FormA22Cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
