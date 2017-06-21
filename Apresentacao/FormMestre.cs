@@ -19,8 +19,8 @@ namespace Apresentacao
 
         private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormA22Cadastro pais = new FormA22Cadastro();
-            pais.Show();
+            FormA22Cadastro frm = new FormA22Cadastro();
+            frm.Show();
         }
     }
 }
