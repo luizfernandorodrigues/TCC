@@ -53,18 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\BDContexto.cs" />
-    <Compile Include="Migrations\201706131432569_PILOTOPAIS.cs" />
-    <Compile Include="Migrations\201706131432569_PILOTOPAIS.Designer.cs">
-      <DependentUpon>201706131432569_PILOTOPAIS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706131722292_ALTERACAOPAIS.cs" />
-    <Compile Include="Migrations\201706131722292_ALTERACAOPAIS.Designer.cs">
-      <DependentUpon>201706131722292_ALTERACAOPAIS.cs</DependentUpon>
+    <Compile Include="Migrations\201707062220027_inicio.cs" />
+    <Compile Include="Migrations\201707062220027_inicio.Designer.cs">
+      <DependentUpon>201707062220027_inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Base\IRepositorio.cs" />
     <Compile Include="Repositorios\Base\Repositorio.cs" />
+    <Compile Include="Repositorios\EstadoRepositorio.cs" />
     <Compile Include="Repositorios\PaisRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,16 +71,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706131432569_PILOTOPAIS.resx">
-      <DependentUpon>201706131432569_PILOTOPAIS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706131722292_ALTERACAOPAIS.resx">
-      <DependentUpon>201706131722292_ALTERACAOPAIS.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707062220027_inicio.resx">
+      <DependentUpon>201707062220027_inicio.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

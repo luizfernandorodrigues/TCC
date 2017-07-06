@@ -14,19 +14,26 @@ namespace Repositorio.Entidades
         [Key]
         [Column("UKEY")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int paisId { get; set; }
+        public int ukey { get; set; }
 
         [Column("A22_001_C")]
         [Required(ErrorMessage ="Campo Nome é Obrigatorio!")]
         [StringLength(50, MinimumLength =2)]
-        public string nome { get; set; }
+        public string a22_001_c { get; set; }
 
         [Column("A22_002_C")]
         [Required(ErrorMessage ="Campo Código é Obrigatorio!")]
         [StringLength(10, MinimumLength =2)]
-        public string codigo { get; set; }
+        public string a22_002_c { get; set; }
 
+
+        [Column("TIMESTAMP")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime TIMESTAMP { get; set; }
+
+        public virtual ICollection<Estado> estado { get; set; }
+
+       
 
     }
 }

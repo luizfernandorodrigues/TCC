@@ -15,5 +15,6 @@ namespace Repositorio.DALL.Contexto
             : base("SAERP") {}
 
         public DbSet<Pais> Pais { get; set; }
+        public DbSet<Estado> Estado { get; set;}
     }
 }

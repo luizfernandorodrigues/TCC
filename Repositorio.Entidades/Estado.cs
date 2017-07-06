@@ -8,10 +8,32 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Repositorio.Entidades
 {
-   public class Estado
+    [Table("A23")]
+    public class Estado
     {
-        public int estadoId { get; set; }
-        public string nome { get; set; }
-        public string sigla { get; set; }
+        [Key]
+        [Column("UKEY")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ukey { get; set; }
+
+        [Column("A23_001_C", TypeName = "nvarchar")]
+        [Required(ErrorMessage = "Campo Nome é Obrigatório!")]
+        [StringLength(100, MinimumLength = 1)]
+        public string a23_001_c { get; set; }
+
+        [Column("A23_002_C", TypeName = "nvarchar")]
+        [Required(ErrorMessage = "Campo Sigla é Obrigatório!")]
+        [StringLength(2, MinimumLength = 2)]
+        public string a23_002_c { get; set; }
+
+        [Column("TIMESTAMP", TypeName = "DateTime")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime timestamp { get; set; }
+
+        public int A22_UKEY { get; set; }
+        [ForeignKey("A22_UKEY")]
+        public virtual Pais pais { get; set; }
+
+
     }
 }
