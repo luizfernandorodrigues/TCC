@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Repositorio.Entidades
 {
     [Table("A22")]
-    public class Pais
+    public class A22
     {
         [Key]
         [Column("UKEY")]
@@ -31,7 +31,7 @@ namespace Repositorio.Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime TIMESTAMP { get; set; }
 
-        public virtual ICollection<Estado> estado { get; set; }
+        public virtual ICollection<A23> estado { get; set; }
 
        
 

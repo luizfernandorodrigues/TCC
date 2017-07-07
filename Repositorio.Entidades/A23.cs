@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Repositorio.Entidades
 {
     [Table("A23")]
-    public class Estado
+    public class A23
     {
         [Key]
         [Column("UKEY")]
@@ -32,7 +32,9 @@ namespace Repositorio.Entidades
 
         public int A22_UKEY { get; set; }
         [ForeignKey("A22_UKEY")]
-        public virtual Pais pais { get; set; }
+        public virtual A22 pais { get; set; }
+
+        public virtual ICollection<A24> cidade { get; set; }
 
 
     }

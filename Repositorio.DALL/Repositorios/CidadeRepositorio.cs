@@ -8,7 +8,7 @@ using Repositorio.DALL.Repositorios.Base;
 
 namespace Repositorio.DALL.Repositorios
 {
-   public class PaisRepositorio : Repositorio<A22>
+    public class CidadeRepositorio : Repositorio<A24>
     {
     }
 }
