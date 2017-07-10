@@ -154,6 +154,7 @@
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
             this.paísToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.paísToolStripMenuItem.Text = "País";
+            this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 

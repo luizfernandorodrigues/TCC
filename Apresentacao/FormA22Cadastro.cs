@@ -15,9 +15,14 @@ namespace Apresentacao
             InitializeComponent();
         }
 
-        private void FormA22Cadastro_Load(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Eu su um teste!@");
+        }
 
+        private void btnNovo_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("teste dois eu sou herdado e comando");
         }
     }
 }

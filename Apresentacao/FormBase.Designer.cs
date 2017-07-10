@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.btnanterior = new System.Windows.Forms.Button();
+            this.btnProximo = new System.Windows.Forms.Button();
+            this.btnPrimeiro = new System.Windows.Forms.Button();
+            this.btnUltimo = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.statusStripBarra = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -39,12 +45,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.btnRelatorio = new System.Windows.Forms.Button();
-            this.btnPesquisa = new System.Windows.Forms.Button();
-            this.btnanterior = new System.Windows.Forms.Button();
-            this.btnProximo = new System.Windows.Forms.Button();
-            this.btnPrimeiro = new System.Windows.Forms.Button();
-            this.btnUltimo = new System.Windows.Forms.Button();
             this.toolTipFormBase = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.statusStripBarra.SuspendLayout();
@@ -63,6 +63,70 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 83);
             this.panel1.TabIndex = 5;
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Image = global::Apresentacao.Properties.Resources.Report_Card_25px;
+            this.btnRelatorio.Location = new System.Drawing.Point(3, 43);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(49, 34);
+            this.btnRelatorio.TabIndex = 6;
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.Pesquisasearch_25px;
+            this.btnPesquisa.Location = new System.Drawing.Point(3, 3);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(49, 34);
+            this.btnPesquisa.TabIndex = 0;
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            // 
+            // btnanterior
+            // 
+            this.btnanterior.Enabled = false;
+            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnanterior.Image = global::Apresentacao.Properties.Resources.left_round_25px;
+            this.btnanterior.Location = new System.Drawing.Point(58, 43);
+            this.btnanterior.Name = "btnanterior";
+            this.btnanterior.Size = new System.Drawing.Size(49, 34);
+            this.btnanterior.TabIndex = 3;
+            this.btnanterior.UseVisualStyleBackColor = true;
+            // 
+            // btnProximo
+            // 
+            this.btnProximo.Enabled = false;
+            this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProximo.Image = global::Apresentacao.Properties.Resources.right_round_25px;
+            this.btnProximo.Location = new System.Drawing.Point(113, 43);
+            this.btnProximo.Name = "btnProximo";
+            this.btnProximo.Size = new System.Drawing.Size(49, 34);
+            this.btnProximo.TabIndex = 4;
+            this.btnProximo.UseVisualStyleBackColor = true;
+            // 
+            // btnPrimeiro
+            // 
+            this.btnPrimeiro.Enabled = false;
+            this.btnPrimeiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrimeiro.Image = global::Apresentacao.Properties.Resources.skip_to_start_25px;
+            this.btnPrimeiro.Location = new System.Drawing.Point(58, 3);
+            this.btnPrimeiro.Name = "btnPrimeiro";
+            this.btnPrimeiro.Size = new System.Drawing.Size(49, 34);
+            this.btnPrimeiro.TabIndex = 1;
+            this.btnPrimeiro.UseVisualStyleBackColor = true;
+            // 
+            // btnUltimo
+            // 
+            this.btnUltimo.Enabled = false;
+            this.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUltimo.Image = global::Apresentacao.Properties.Resources.end_25px;
+            this.btnUltimo.Location = new System.Drawing.Point(113, 3);
+            this.btnUltimo.Name = "btnUltimo";
+            this.btnUltimo.Size = new System.Drawing.Size(49, 34);
+            this.btnUltimo.TabIndex = 2;
+            this.btnUltimo.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -162,70 +226,6 @@
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNovo.UseVisualStyleBackColor = false;
             // 
-            // btnRelatorio
-            // 
-            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelatorio.Image = global::Apresentacao.Properties.Resources.Report_Card_25px;
-            this.btnRelatorio.Location = new System.Drawing.Point(3, 43);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(49, 34);
-            this.btnRelatorio.TabIndex = 6;
-            this.btnRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.Pesquisasearch_25px;
-            this.btnPesquisa.Location = new System.Drawing.Point(3, 3);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(49, 34);
-            this.btnPesquisa.TabIndex = 0;
-            this.btnPesquisa.UseVisualStyleBackColor = true;
-            // 
-            // btnanterior
-            // 
-            this.btnanterior.Enabled = false;
-            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnanterior.Image = global::Apresentacao.Properties.Resources.left_round_25px;
-            this.btnanterior.Location = new System.Drawing.Point(58, 43);
-            this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(49, 34);
-            this.btnanterior.TabIndex = 3;
-            this.btnanterior.UseVisualStyleBackColor = true;
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.Enabled = false;
-            this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximo.Image = global::Apresentacao.Properties.Resources.right_round_25px;
-            this.btnProximo.Location = new System.Drawing.Point(113, 43);
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(49, 34);
-            this.btnProximo.TabIndex = 4;
-            this.btnProximo.UseVisualStyleBackColor = true;
-            // 
-            // btnPrimeiro
-            // 
-            this.btnPrimeiro.Enabled = false;
-            this.btnPrimeiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrimeiro.Image = global::Apresentacao.Properties.Resources.skip_to_start_25px;
-            this.btnPrimeiro.Location = new System.Drawing.Point(58, 3);
-            this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(49, 34);
-            this.btnPrimeiro.TabIndex = 1;
-            this.btnPrimeiro.UseVisualStyleBackColor = true;
-            // 
-            // btnUltimo
-            // 
-            this.btnUltimo.Enabled = false;
-            this.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUltimo.Image = global::Apresentacao.Properties.Resources.end_25px;
-            this.btnUltimo.Location = new System.Drawing.Point(113, 3);
-            this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(49, 34);
-            this.btnUltimo.TabIndex = 2;
-            this.btnUltimo.UseVisualStyleBackColor = true;
-            // 
             // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,21 +255,22 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPrimeiro;
-        private System.Windows.Forms.Button btnUltimo;
-        private System.Windows.Forms.Button btnanterior;
-        private System.Windows.Forms.Button btnProximo;
-        private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button btnPesquisa;
-        private System.Windows.Forms.Button btnRelatorio;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.StatusStrip statusStripBarra;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolTip toolTipFormBase;
+
+        protected System.Windows.Forms.Button btnPrimeiro;
+        protected System.Windows.Forms.Button btnUltimo;
+        protected System.Windows.Forms.Button btnanterior;
+        protected System.Windows.Forms.Button btnProximo;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Button btnPesquisa;
+        protected System.Windows.Forms.Button btnRelatorio;
+        protected System.Windows.Forms.Button btnNovo;
+        protected System.Windows.Forms.Button btnEditar;
+        protected System.Windows.Forms.Button btnSalvar;
+        protected System.Windows.Forms.Button btnExcluir;
+        protected System.Windows.Forms.Button btnSair;
+        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.StatusStrip statusStripBarra;
+        protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        protected System.Windows.Forms.ToolTip toolTipFormBase;
     }
 }
