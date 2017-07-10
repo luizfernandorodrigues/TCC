@@ -29,11 +29,6 @@ namespace Apresentacao
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormBase_Load(object sender, EventArgs e)
         {
             toolTipFormBase.SetToolTip(btnNovo, novo);
@@ -49,6 +44,6 @@ namespace Apresentacao
             toolTipFormBase.SetToolTip(btnanterior, anterior);
         }
 
-        
+
     }
 }

@@ -66,7 +66,7 @@
             // btnNovo
             // 
             this.toolTipFormBase.SetToolTip(this.btnNovo, "Adicionar Registro!");
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click_1);
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnEditar
             // 

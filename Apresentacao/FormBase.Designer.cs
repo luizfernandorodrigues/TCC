@@ -210,7 +210,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnNovo
             // 
@@ -256,21 +255,21 @@
 
         #endregion
 
-        protected System.Windows.Forms.Button btnPrimeiro;
-        protected System.Windows.Forms.Button btnUltimo;
-        protected System.Windows.Forms.Button btnanterior;
-        protected System.Windows.Forms.Button btnProximo;
-        protected System.Windows.Forms.Panel panel1;
-        protected System.Windows.Forms.Button btnPesquisa;
-        protected System.Windows.Forms.Button btnRelatorio;
-        protected System.Windows.Forms.Button btnNovo;
-        protected System.Windows.Forms.Button btnEditar;
-        protected System.Windows.Forms.Button btnSalvar;
-        protected System.Windows.Forms.Button btnExcluir;
-        protected System.Windows.Forms.Button btnSair;
-        protected System.Windows.Forms.TextBox textBox1;
-        protected System.Windows.Forms.StatusStrip statusStripBarra;
-        protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        protected System.Windows.Forms.ToolTip toolTipFormBase;
+        public System.Windows.Forms.Button btnPrimeiro;
+        public System.Windows.Forms.Button btnUltimo;
+        public System.Windows.Forms.Button btnanterior;
+        public System.Windows.Forms.Button btnProximo;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnPesquisa;
+        public System.Windows.Forms.Button btnRelatorio;
+        public System.Windows.Forms.Button btnNovo;
+        public System.Windows.Forms.Button btnEditar;
+        public System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.Button btnExcluir;
+        public System.Windows.Forms.Button btnSair;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.StatusStrip statusStripBarra;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        public System.Windows.Forms.ToolTip toolTipFormBase;
     }
 }
