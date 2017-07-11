@@ -16,14 +16,16 @@ namespace Repositorio.Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ukey { get; set; }
 
+        [Display (Name ="Nome")]
         [Column("A22_001_C")]
         [Required(ErrorMessage ="Campo Nome é Obrigatorio!")]
         [StringLength(50, MinimumLength =2)]
         public string a22_001_c { get; set; }
 
+        [Display(Name ="Código")]
         [Column("A22_002_C")]
         [Required(ErrorMessage ="Campo Código é Obrigatorio!")]
-        [StringLength(10, MinimumLength =2)]
+        [MaxLength(4), MinLength(2)]
         public string a22_002_c { get; set; }
 
 

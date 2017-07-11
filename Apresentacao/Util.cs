@@ -12,6 +12,17 @@ namespace Apresentacao
         public static string titulo = "SAERP Informa";
         public static string sucesso = "Registro Gravado com Sucesso!";
         public static string erro = "Não Foi Possivel Gravar o Registro!\n ERRO: ";
+        public static string novo = "Adicionar Registro!";
+        public static string editar = "Editar Registro da Tela!";
+        public static string salvar = "Salvar Registro da Tela!";
+        public static string excluir = "Excluir Registro da Tela";
+        public static string proximo = "Próximo Registro!";
+        public static string anterior = "Registro Anterior!";
+        public static string ultimo = "Pular para o ultimo Registro!";
+        public static string primeiro = "Ir para o Primeiro Registro!";
+        public static string pesquisa = "Pesquisar Registros do Banco de Dados!";
+        public static string relatorio = "Abrir tela de Relatórios!";
+        public static string sair = "Sair da Tela";
 
 
         public static void HabilitaCampos(Control.ControlCollection controles)
@@ -267,5 +278,7 @@ namespace Apresentacao
                 }
             }
         }
+
+
     }
 }

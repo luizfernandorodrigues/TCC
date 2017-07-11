@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Windows.Forms;
 
 namespace Apresentacao
 {
@@ -18,5 +19,16 @@ namespace Apresentacao
             Validator.TryValidateObject(obj, contexto, resultadoValidacao, true);
             return resultadoValidacao;
         }
+
+        public static void ValidarEntidade(object obj)
+        {
+            var erros = Validacao.getValidationErros(obj);
+            foreach(var error in erros)
+            {
+                MessageBox.Show((error.ErrorMessage));
+            }
+        }
     }
+
+    
 }

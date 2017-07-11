@@ -14,11 +14,13 @@ namespace Repositorio.Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ukey { get; set; }
 
+        [Display(Name ="Nome")]
         [Column("A24_001_C", TypeName ="nvarchar")]
         [Required(ErrorMessage ="Campo Nome da Cidade é Obrigatorio!")]
         [MaxLength(60), MinLength(2)]
         public string a24_001_c { get; set; }
 
+        [Display(Name ="Código IBGE")]
         [Column("A24_002_N", TypeName ="int")]
         [Required(ErrorMessage ="Campo Código do IBGE é Obrigatório!")]
         [MinLength(7)]

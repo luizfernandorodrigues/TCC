@@ -15,12 +15,14 @@ namespace Repositorio.Entidades
         [Column("UKEY")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ukey { get; set; }
-
+        
+        [Display(Name ="Nome")]
         [Column("A23_001_C", TypeName = "nvarchar")]
         [Required(ErrorMessage = "Campo Nome é Obrigatório!")]
         [StringLength(100, MinimumLength = 1)]
         public string a23_001_c { get; set; }
 
+        [Display(Name ="Sigla")]
         [Column("A23_002_C", TypeName = "nvarchar")]
         [Required(ErrorMessage = "Campo Sigla é Obrigatório!")]
         [StringLength(2, MinimumLength = 2)]
