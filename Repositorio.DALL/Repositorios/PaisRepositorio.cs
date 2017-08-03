@@ -5,10 +5,54 @@ using System.Text;
 using System.Threading.Tasks;
 using Repositorio.Entidades;
 using Repositorio.DALL.Repositorios.Base;
+using System.Windows.Forms;
+
 
 namespace Repositorio.DALL.Repositorios
 {
-   public class PaisRepositorio : Repositorio<A22>
+    public class PaisRepositorio : Repositorio<A22>
     {
+        
+        public int pesquisa(DataGridView dados, string nome, int operador)
+        {
+            using (var repPais = new PaisRepositorio())
+            {
+                //se não passar nenhum parametro entra aqui e executo um getAll
+                if (nome.Equals(""))
+                {
+                    dados.DataSource = repPais.GetAll().ToList();
+                }
+                //se for iniciado por
+                else if (operador == 0)
+                {
+                     dados.DataSource = repPais.Get(c => c.a22_001_c.StartsWith(nome.ToUpper())).ToList();
+                }
+                //se for igual
+                else if (operador == 1)
+                {
+                    dados.DataSource = repPais.Get(c => c.a22_001_c.Equals(nome.ToUpper())).ToList();
+                }
+                //se for contem
+                else if (operador == 5)
+                {
+                    dados.DataSource = repPais.Get(c => c.a22_001_c.Contains(nome.ToUpper())).ToList();
+                }
+                //se for diferente
+                else if (operador == 6)
+                {
+                    dados.DataSource = repPais.Get(c => c.a22_001_c != nome.ToUpper()).ToList();
+                }
+                //se for terminado por
+                else if (operador == 7)
+                {
+                    dados.DataSource = repPais.Get(c => c.a22_001_c.EndsWith(nome.ToUpper())).ToList();
+                }
+                int cont = dados.RowCount;
+                return cont;
+                              
+            }
+            
+        }
     }
 }
+

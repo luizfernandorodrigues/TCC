@@ -84,6 +84,7 @@
             this.btnPesquisa.Size = new System.Drawing.Size(49, 34);
             this.btnPesquisa.TabIndex = 0;
             this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // btnanterior
             // 
@@ -224,6 +225,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(42, 96);
             this.txtNome.Name = "txtNome";

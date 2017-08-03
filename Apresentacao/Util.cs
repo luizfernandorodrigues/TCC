@@ -279,6 +279,18 @@ namespace Apresentacao
             }
         }
 
+        //verifica se o grid esta vazio
+        public static string VerificaGrid(DataGridView dados)
+        {
+            if (dados.DataSource == null)
+            {
+                return "Nenhum Registro Encontrado!";
+            }
+            else
+            {
+                return null;
+            }
 
+        }
     }
 }

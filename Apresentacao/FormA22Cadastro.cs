@@ -106,5 +106,11 @@ namespace Apresentacao
             toolTipA22Cadastro.SetToolTip(btnExcluir, Util.excluir);
             toolTipA22Cadastro.SetToolTip(btnSair, Util.sair);
         }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            FormPesquisa frm = new FormPesquisa();
+            frm.Show();
+        }
     }
 }

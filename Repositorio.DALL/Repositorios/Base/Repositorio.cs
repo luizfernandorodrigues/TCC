@@ -19,13 +19,10 @@ namespace Repositorio.DALL.Repositorios.Base
         }
 
         public IQueryable<TEntity> Get(Func<TEntity, bool> predicate)
-
         {
-
-            return GetAll().Where(predicate).AsQueryable();
-
+            return ctx.Set<TEntity>().Where(predicate).AsQueryable();
         }
-       
+
 
         public TEntity Find(params object[] key)
 
