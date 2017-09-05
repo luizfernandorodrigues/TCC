@@ -83,6 +83,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_15px {
+            get {
+                object obj = ResourceManager.GetObject("edit_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_25px {
             get {
                 object obj = ResourceManager.GetObject("Edit_25px", resourceCulture);
@@ -173,6 +183,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_Excel_25px1 {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft Excel_25px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Organization_25px {
             get {
                 object obj = ResourceManager.GetObject("Organization_25px", resourceCulture);
@@ -196,6 +216,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap Pesquisasearch_25px {
             get {
                 object obj = ResourceManager.GetObject("Pesquisasearch_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_15px {
+            get {
+                object obj = ResourceManager.GetObject("plus_15px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +283,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_15px {
+            get {
+                object obj = ResourceManager.GetObject("search_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_25px {
             get {
                 object obj = ResourceManager.GetObject("Search_25px", resourceCulture);
@@ -273,9 +313,29 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap trash_15px {
+            get {
+                object obj = ResourceManager.GetObject("trash_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Upload_25px {
             get {
                 object obj = ResourceManager.GetObject("Upload_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upload_25px1 {
+            get {
+                object obj = ResourceManager.GetObject("Upload_25px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

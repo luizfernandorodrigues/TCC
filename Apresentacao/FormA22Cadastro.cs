@@ -50,6 +50,8 @@ namespace Apresentacao
                 //disparo comando para gravar fisicamente no banco de dados
                 repPais.SalvarTodos();
             }
+            btnExcluiEstado.Enabled = false;
+            btnNovoEstado.Enabled = false;
 
         }
         /// <summary>
@@ -123,6 +125,11 @@ namespace Apresentacao
             toolTipA22Cadastro.SetToolTip(btnSalvar, Util.salvar);
             toolTipA22Cadastro.SetToolTip(btnExcluir, Util.excluir);
             toolTipA22Cadastro.SetToolTip(btnSair, Util.sair);
+            toolTipA22Cadastro.SetToolTip(btnEditaEstado, Util.botaEditaGrade);
+            toolTipA22Cadastro.SetToolTip(btnExcluiEstado, Util.botaoexcluirRegistroGrade);
+            toolTipA22Cadastro.SetToolTip(btnNovoEstado, Util.botaoNovoGrade);
+            toolTipA22Cadastro.SetToolTip(btnVisualizaEstado, Util.botaVisualizarRegistroGrade);
+
 
         }
 
@@ -252,6 +259,8 @@ namespace Apresentacao
             btnRelatorio.Enabled = false;
             btnUltimo.Enabled = false;
             btnProximo.Enabled = false;
+            btnEditaEstado.Enabled = true;
+            btnNovoEstado.Enabled = true;
         }
         //função para alterar dados
         private void Alterar()

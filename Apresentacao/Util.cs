@@ -9,6 +9,9 @@ namespace Apresentacao
 {
     public static class Util
     {
+        /// <summary>
+        /// Dica dos botões dos forms principais
+        /// </summary>
         public static string titulo = "SAERP Informa";
         public static string sucesso = "Registro Gravado com Sucesso!";
         public static string erro = "Não Foi Possivel Gravar o Registro!\n ERRO: ";
@@ -27,6 +30,13 @@ namespace Apresentacao
         public static string sair = "Sair da Tela";
         public static string carregarSelecionados = "Carregar Selecionados!";
 
+        /// <summary>
+        /// Discas dos botões que ficão acima das grid dos forms
+        /// </summary>
+        public static string botaoNovoGrade = "Adicionar Registro!";
+        public static string botaEditaGrade = "Editar Registro Selecionado";
+        public static string botaVisualizarRegistroGrade = "Visualizar Registro Selecionado!";
+        public static string botaoexcluirRegistroGrade = "Excluir Registro Selecionado!";
 
         public static void HabilitaCampos(Control.ControlCollection controles)
         {
