@@ -37,7 +37,7 @@
             this.btnProximo = new System.Windows.Forms.Button();
             this.btnPrimeiro = new System.Windows.Forms.Button();
             this.btnUltimo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtControles = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -48,7 +48,15 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.toolTipA22Cadastro = new System.Windows.Forms.ToolTip(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +104,7 @@
             this.btnanterior.Size = new System.Drawing.Size(49, 34);
             this.btnanterior.TabIndex = 3;
             this.btnanterior.UseVisualStyleBackColor = true;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
             // 
             // btnProximo
             // 
@@ -107,6 +116,7 @@
             this.btnProximo.Size = new System.Drawing.Size(49, 34);
             this.btnProximo.TabIndex = 4;
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnPrimeiro
             // 
@@ -118,6 +128,7 @@
             this.btnPrimeiro.Size = new System.Drawing.Size(49, 34);
             this.btnPrimeiro.TabIndex = 1;
             this.btnPrimeiro.UseVisualStyleBackColor = true;
+            this.btnPrimeiro.Click += new System.EventHandler(this.btnPrimeiro_Click);
             // 
             // btnUltimo
             // 
@@ -129,18 +140,19 @@
             this.btnUltimo.Size = new System.Drawing.Size(49, 34);
             this.btnUltimo.TabIndex = 2;
             this.btnUltimo.UseVisualStyleBackColor = true;
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
-            // textBox1
+            // txtControles
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(178, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 20);
-            this.textBox1.TabIndex = 19;
-            this.textBox1.Text = "Controles";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtControles.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtControles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtControles.Enabled = false;
+            this.txtControles.Location = new System.Drawing.Point(178, 67);
+            this.txtControles.Name = "txtControles";
+            this.txtControles.Size = new System.Drawing.Size(302, 20);
+            this.txtControles.TabIndex = 19;
+            this.txtControles.Text = "Controles";
+            this.txtControles.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSair
             // 
@@ -169,6 +181,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -198,6 +211,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNovo
             // 
@@ -254,17 +268,83 @@
             this.toolTipA22Cadastro.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipA22Cadastro.ToolTipTitle = "Dica";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nome,
+            this.sigla});
+            this.dataGridView1.Location = new System.Drawing.Point(2, 176);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(478, 236);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // nome
+            // 
+            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nome.DataPropertyName = "a23_001_c";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // sigla
+            // 
+            this.sigla.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sigla.DataPropertyName = "a23_002_c";
+            this.sigla.HeaderText = "Sigla";
+            this.sigla.Name = "sigla";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(2, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(83, 150);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(164, 150);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(245, 150);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // FormA22Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 424);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtControles);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -276,6 +356,7 @@
             this.Text = "Cadastro de País";
             this.Load += new System.EventHandler(this.FormA22Cadastro_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,16 +371,23 @@
         public System.Windows.Forms.Button btnProximo;
         public System.Windows.Forms.Button btnPrimeiro;
         public System.Windows.Forms.Button btnUltimo;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtControles;
         public System.Windows.Forms.Button btnSair;
         public System.Windows.Forms.Button btnExcluir;
         public System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.ToolTip toolTipA22Cadastro;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sigla;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

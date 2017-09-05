@@ -110,6 +110,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Repositorio.DALL.Repositorios.PaisRepositorio.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,6 +157,8 @@
     <Content Include="Imagens\Down 3_25px.png" />
     <Content Include="Imagens\Edit Property_15px.png" />
     <Content Include="Imagens\Edit_25px.png" />
+    <None Include="Imagens\Microsoft Excel_25px.png" />
+    <None Include="Imagens\Upload_25px.png" />
     <Content Include="jmti.ico" />
     <None Include="Imagens\right_round_25px.png" />
     <None Include="Imagens\left_round_25px.png" />

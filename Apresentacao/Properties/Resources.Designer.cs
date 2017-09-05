@@ -163,6 +163,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_Excel_25px {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft Excel_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Organization_25px {
             get {
                 object obj = ResourceManager.GetObject("Organization_25px", resourceCulture);
@@ -256,6 +266,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap skip_to_start_25px {
             get {
                 object obj = ResourceManager.GetObject("skip_to_start_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upload_25px {
+            get {
+                object obj = ResourceManager.GetObject("Upload_25px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

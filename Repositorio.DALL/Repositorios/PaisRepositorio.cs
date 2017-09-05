@@ -12,7 +12,14 @@ namespace Repositorio.DALL.Repositorios
 {
     public class PaisRepositorio : Repositorio<A22>
     {
-        
+        /// <summary>
+        /// Função para pesquisar o objeto pais no banco de dados, recebe uma grid e o parametro a ser pesquisadso
+        /// e o operador que determina o filtro no where
+        /// </summary>
+        /// <param name="dados"></param>
+        /// <param name="nome"></param>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         public int pesquisa(DataGridView dados, string nome, int operador)
         {
             using (var repPais = new PaisRepositorio())
@@ -25,7 +32,7 @@ namespace Repositorio.DALL.Repositorios
                 //se for iniciado por
                 else if (operador == 0)
                 {
-                     dados.DataSource = repPais.Get(c => c.a22_001_c.StartsWith(nome.ToUpper())).ToList();
+                    dados.DataSource = repPais.Get(c => c.a22_001_c.StartsWith(nome.ToUpper())).ToList();
                 }
                 //se for igual
                 else if (operador == 1)
@@ -49,10 +56,24 @@ namespace Repositorio.DALL.Repositorios
                 }
                 int cont = dados.RowCount;
                 return cont;
-                              
+
             }
-            
+
+        }
+        /// <summary>
+        /// Função para carregar estados quando selecionar um pais.
+        /// </summary>
+        /// <param name="dados"></param>
+        /// <param name="idPais"></param>
+        public void carregaEstados(DataGridView dados, int idPais)
+        {
+            using(var repEstado = new EstadoRepositorio())
+            {
+                dados.DataSource = repEstado.Get(c => c.A22_UKEY.Equals(idPais)).ToList();
+            }
         }
     }
+
+
 }
 

@@ -12,6 +12,8 @@ namespace Apresentacao
         public static string titulo = "SAERP Informa";
         public static string sucesso = "Registro Gravado com Sucesso!";
         public static string erro = "Não Foi Possivel Gravar o Registro!\n ERRO: ";
+        public static string exclusaoSucesso = "Registro Excluido com Sucesso!";
+        public static string exclusaoErro = "Não Foi Possivel Excluir o Registro:\nErro:";
         public static string novo = "Adicionar Registro!";
         public static string editar = "Editar Registro da Tela!";
         public static string salvar = "Salvar Registro da Tela!";
@@ -23,6 +25,7 @@ namespace Apresentacao
         public static string pesquisa = "Pesquisar Registros do Banco de Dados!";
         public static string relatorio = "Abrir tela de Relatórios!";
         public static string sair = "Sair da Tela";
+        public static string carregarSelecionados = "Carregar Selecionados!";
 
 
         public static void HabilitaCampos(Control.ControlCollection controles)
@@ -102,9 +105,9 @@ namespace Apresentacao
         /// Metodo Responsavel por limpar todos textbox do formulario
         /// </summary>
         /// <param name="controles"></param>
-        public static void LimpaCampos(Control.ControlCollection controles)
+        public static void LimpaCampos(Control controles)
         {
-            foreach (Control ctrl in controles)
+            foreach (Control ctrl in controles.Controls)
             {
                 //verifico se for o campo entra e atribui false na propriedade enabled
                 if (ctrl is TextBox)

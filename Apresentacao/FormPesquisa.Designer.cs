@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
             this.dataGridViewDados = new System.Windows.Forms.DataGridView();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnPesquisa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxNomePesquisa = new System.Windows.Forms.ComboBox();
             this.txtNomePesquisa = new System.Windows.Forms.TextBox();
             this.lblNomePesquisa = new System.Windows.Forms.Label();
+            this.SL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.btnCarregaSelecionados = new System.Windows.Forms.Button();
+            this.toolTipA22Pesquisa = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -48,45 +51,13 @@
             this.dataGridViewDados.AllowUserToDeleteRows = false;
             this.dataGridViewDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nome,
-            this.codigo});
-            this.dataGridViewDados.Location = new System.Drawing.Point(12, 96);
+            this.SL,
+            this.codigo,
+            this.nome});
+            this.dataGridViewDados.Location = new System.Drawing.Point(12, 107);
             this.dataGridViewDados.Name = "dataGridViewDados";
-            this.dataGridViewDados.Size = new System.Drawing.Size(603, 362);
+            this.dataGridViewDados.Size = new System.Drawing.Size(603, 351);
             this.dataGridViewDados.TabIndex = 0;
-            // 
-            // nome
-            // 
-            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nome.DataPropertyName = "a22_001_c";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            // 
-            // codigo
-            // 
-            this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigo.DataPropertyName = "a22_002_c";
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Carregar Filtrados";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.Search_25px;
-            this.btnPesquisa.Location = new System.Drawing.Point(333, 12);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(75, 29);
-            this.btnPesquisa.TabIndex = 2;
-            this.btnPesquisa.UseVisualStyleBackColor = true;
-            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // groupBox1
             // 
@@ -125,6 +96,51 @@
             this.lblNomePesquisa.TabIndex = 0;
             this.lblNomePesquisa.Text = "Nome:";
             // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            this.SL.Width = 50;
+            // 
+            // codigo
+            // 
+            this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigo.DataPropertyName = "a22_002_c";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            // 
+            // nome
+            // 
+            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nome.DataPropertyName = "a22_001_c";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.Search_25px;
+            this.btnPesquisa.Location = new System.Drawing.Point(333, 20);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(75, 29);
+            this.btnPesquisa.TabIndex = 2;
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            // 
+            // btnCarregaSelecionados
+            // 
+            this.btnCarregaSelecionados.Image = global::Apresentacao.Properties.Resources.Upload_25px;
+            this.btnCarregaSelecionados.Location = new System.Drawing.Point(12, 63);
+            this.btnCarregaSelecionados.Name = "btnCarregaSelecionados";
+            this.btnCarregaSelecionados.Size = new System.Drawing.Size(44, 38);
+            this.btnCarregaSelecionados.TabIndex = 1;
+            this.btnCarregaSelecionados.UseVisualStyleBackColor = true;
+            this.btnCarregaSelecionados.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolTipA22Pesquisa
+            // 
+            this.toolTipA22Pesquisa.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipA22Pesquisa.ToolTipTitle = "Dica";
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(627, 469);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPesquisa);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCarregaSelecionados);
             this.Controls.Add(this.dataGridViewDados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -150,13 +166,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewDados;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCarregaSelecionados;
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBoxNomePesquisa;
         private System.Windows.Forms.TextBox txtNomePesquisa;
         private System.Windows.Forms.Label lblNomePesquisa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SL;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.ToolTip toolTipA22Pesquisa;
     }
 }

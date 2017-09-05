@@ -16,6 +16,10 @@ namespace Apresentacao
     {
         //variavel pra controlar se é editar ou incluir
         private int flag = 1;
+        public static List<A22> list = new List<A22>();
+        public static BindingSource navegar = new BindingSource();
+        BindingSource aux = new BindingSource();
+
         public FormA22Cadastro()
         {
             InitializeComponent();
@@ -25,6 +29,7 @@ namespace Apresentacao
         {
             Util.HabilitaBotoesTabControl(this);
             Util.HabilitaCamposTabControl(this);
+            Util.LimpaCampos(this);
         }
         //função do botao gravar carrega o model e passa para o repositorio
         private void Adiconar()
@@ -70,7 +75,7 @@ namespace Apresentacao
                     MessageBox.Show(Util.sucesso, Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Util.DesabilitaCamposTabControl(this);
                     btnSalvar.Enabled = false;
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +87,19 @@ namespace Apresentacao
             // edição
             else if (flag == 2)
             {
+                try
+                {
+                    Alterar();
+                    Util.DesabilitaCamposTabControl(this);
+                    MessageBox.Show(Util.sucesso, Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnSalvar.Enabled = false;
+                    btnPesquisa.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(Util.erro + ex.Message, Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
             }
         }
@@ -105,12 +123,184 @@ namespace Apresentacao
             toolTipA22Cadastro.SetToolTip(btnSalvar, Util.salvar);
             toolTipA22Cadastro.SetToolTip(btnExcluir, Util.excluir);
             toolTipA22Cadastro.SetToolTip(btnSair, Util.sair);
+
         }
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            FormPesquisa frm = new FormPesquisa();
+            FormPesquisa frm = new FormPesquisa(this);
             frm.Show();
+        }
+        //botao anterior
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            Navegar(0, list);
+        }
+
+        private void Navegar(int flag, List<A22> lst)
+        {
+            if (navegar.DataSource == null)
+            {
+                navegar.DataSource = lst;
+            }
+            //se for anterior
+            if (flag == 0)
+            {
+                if (navegar.Position == 0)
+                {
+                    MessageBox.Show("Primeiro Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    try
+                    {
+                        navegar.MovePrevious();
+                        txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                        txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            // se for proximo
+            else if (flag == 1)
+            {
+                if (navegar.Position + 1 >= navegar.Count)
+                {
+                    MessageBox.Show("Ultimo Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        navegar.MoveNext();
+                        txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
+                        txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            //se for primeiro
+            else if (flag == 2)
+            {
+                try
+                {
+                    navegar.MoveFirst();
+                    txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
+                    txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                    MessageBox.Show("Primeiro Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            //se for ultimo
+            else
+            {
+                try
+                {
+                    navegar.MoveLast();
+                    txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
+                    txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                    MessageBox.Show("Ultimo Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            Navegar(1, list);
+        }
+
+        private void btnPrimeiro_Click(object sender, EventArgs e)
+        {
+            Navegar(2, list);
+        }
+
+        private void btnUltimo_Click(object sender, EventArgs e)
+        {
+            Navegar(3, list);
+        }
+        //botao editar
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        //função botao editar
+        private void Editar()
+        {
+            Util.HabilitaCamposTabControl(this);
+            flag = 2;
+            btnExcluir.Enabled = false;
+            btnanterior.Enabled = false;
+            btnEditar.Enabled = false;
+            btnNovo.Enabled = false;
+            btnPesquisa.Enabled = false;
+            btnPrimeiro.Enabled = false;
+            btnRelatorio.Enabled = false;
+            btnUltimo.Enabled = false;
+            btnProximo.Enabled = false;
+        }
+        //função para alterar dados
+        private void Alterar()
+        {
+            using (var repPais = new PaisRepositorio())
+            {
+                A22 pais = new A22();
+                pais = navegar.Current as A22;
+                pais.a22_001_c = txtNome.Text;
+                pais.a22_002_c = txtCodigo.Text;
+
+                //chamo a função statica que valida se o objeto esta corretamente preenchido
+                //atraves do model que foi setado os parametros
+                Validacao.ValidarEntidade(pais);
+
+                //adiciono o objeto na memoria
+                repPais.Atualizar(pais);
+
+                //disparo comando para gravar fisicamente no banco de dados
+                repPais.SalvarTodos();
+            }
+        }
+        //função para excluir
+        private void Excluir()
+        {
+            using (var repPais = new PaisRepositorio())
+            {
+                A22 pais = new A22();
+                pais = navegar.Current as A22;
+                int id = pais.ukey;
+                repPais.Excluir(c => c.ukey.Equals(id));
+                repPais.SalvarTodos();
+            }
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Excluir();
+                Util.LimpaCampos(this);
+                navegar.MoveNext();
+                MessageBox.Show(Util.exclusaoSucesso, Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(Util.exclusaoErro + ex.Message, Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }
