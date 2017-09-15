@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Repositorio.DALL.Repositorios
 {
-    public class PaisRepositorio : Repositorio<A22>
+    public class PaisRepositorio : Repositorio<Pais>
     {
         /// <summary>
         /// Função para pesquisar o objeto pais no banco de dados, recebe uma grid e o parametro a ser pesquisadso
@@ -32,27 +32,27 @@ namespace Repositorio.DALL.Repositorios
                 //se for iniciado por
                 else if (operador == 0)
                 {
-                    dados.DataSource = repPais.Get(c => c.a22_001_c.StartsWith(nome.ToUpper())).ToList();
+                    dados.DataSource = repPais.Get(c => c.descricaoPais.StartsWith(nome.ToUpper())).ToList();
                 }
                 //se for igual
                 else if (operador == 1)
                 {
-                    dados.DataSource = repPais.Get(c => c.a22_001_c.Equals(nome.ToUpper())).ToList();
+                    dados.DataSource = repPais.Get(c => c.descricaoPais.Equals(nome.ToUpper())).ToList();
                 }
                 //se for contem
                 else if (operador == 5)
                 {
-                    dados.DataSource = repPais.Get(c => c.a22_001_c.Contains(nome.ToUpper())).ToList();
+                    dados.DataSource = repPais.Get(c => c.descricaoPais.Contains(nome.ToUpper())).ToList();
                 }
                 //se for diferente
                 else if (operador == 6)
                 {
-                    dados.DataSource = repPais.Get(c => c.a22_001_c != nome.ToUpper()).ToList();
+                    dados.DataSource = repPais.Get(c => c.descricaoPais != nome.ToUpper()).ToList();
                 }
                 //se for terminado por
                 else if (operador == 7)
                 {
-                    dados.DataSource = repPais.Get(c => c.a22_001_c.EndsWith(nome.ToUpper())).ToList();
+                    dados.DataSource = repPais.Get(c => c.descricaoPais.EndsWith(nome.ToUpper())).ToList();
                 }
                 int cont = dados.RowCount;
                 return cont;

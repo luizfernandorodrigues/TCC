@@ -8,25 +8,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Repositorio.Entidades
 {
-    [Table("A22")]
-    public class A22
+    [Table("tblPais")]
+    public class Pais
     {
         [Key]
-        [Column("UKEY")]
+        [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ukey { get; set; }
 
         [Display (Name ="Nome")]
-        [Column("A22_001_C")]
+        [Column("descricaoPais")]
         [Required(ErrorMessage ="Campo Nome é Obrigatorio!")]
         [StringLength(50, MinimumLength =2)]
-        public string a22_001_c { get; set; }
+        public string descricaoPais { get; set; }
 
         [Display(Name ="Código")]
-        [Column("A22_002_C")]
+        [Column("codigoPais")]
         [Required(ErrorMessage ="Campo Código é Obrigatorio!")]
         [MaxLength(4), MinLength(2)]
-        public string a22_002_c { get; set; }
+        public string codigoPais { get; set; }
 
 
         [Column("TIMESTAMP")]

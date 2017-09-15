@@ -46,8 +46,8 @@ namespace Apresentacao
         //carrego os registros selecionados do grid
         private void button1_Click(object sender, EventArgs e)
         {
-            A22 p = new A22();
-            List<A22> pais = new List<A22>();
+            Pais p = new Pais();
+            List<Pais> pais = new List<Pais>();
             foreach (DataGridViewRow linha in dataGridViewDados.Rows)
             {
                 foreach (DataGridViewCell cel in dataGridViewDados.Rows[linha.Index].Cells)
@@ -57,7 +57,7 @@ namespace Apresentacao
                         if (cel.Value != null)
                         {
                             //aqui implemento o carregamento do datareader que sera percorrido
-                            p = linha.DataBoundItem as A22;
+                            p = linha.DataBoundItem as Pais;
                             //atribuo o p para a lista de pais
                             pais.Add(p);
                         }
@@ -65,8 +65,8 @@ namespace Apresentacao
                 }
 
             }
-            paisForm.txtNome.Text = pais[0].a22_001_c;
-            paisForm.txtCodigo.Text = pais[0].a22_002_c;
+            paisForm.txtNome.Text = pais[0].descricaoPais;
+            paisForm.txtCodigo.Text = pais[0].codigoPais;
             paisForm.btnEditar.Enabled = true;
             paisForm.btnanterior.Enabled = true;
             paisForm.btnProximo.Enabled = true;

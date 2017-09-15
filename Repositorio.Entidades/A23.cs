@@ -34,7 +34,7 @@ namespace Repositorio.Entidades
 
         public int A22_UKEY { get; set; }
         [ForeignKey("A22_UKEY")]
-        public virtual A22 pais { get; set; }
+        public virtual Pais pais { get; set; }
 
         public virtual ICollection<A24> cidade { get; set; }
 

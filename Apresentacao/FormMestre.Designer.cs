@@ -61,7 +61,10 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.condiçãoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelBarraVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -154,44 +157,44 @@
             // 
             this.paísToolStripMenuItem.Image = global::Apresentacao.Properties.Resources.Map_Marker_25px;
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            this.paísToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.paísToolStripMenuItem.Text = "País";
             this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
             // 
             // estadoToolStripMenuItem
             // 
             this.estadoToolStripMenuItem.Image = global::Apresentacao.Properties.Resources.Worldwide_Location_25px;
             this.estadoToolStripMenuItem.Name = "estadoToolStripMenuItem";
-            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.estadoToolStripMenuItem.Text = "Estado";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // cidadeToolStripMenuItem
             // 
             this.cidadeToolStripMenuItem.Image = global::Apresentacao.Properties.Resources.Point_Objects_25px;
             this.cidadeToolStripMenuItem.Name = "cidadeToolStripMenuItem";
-            this.cidadeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.cidadeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cidadeToolStripMenuItem.Text = "Cidade";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(149, 6);
             // 
             // cepToolStripMenuItem
             // 
             this.cepToolStripMenuItem.Image = global::Apresentacao.Properties.Resources.Marker_25px;
             this.cepToolStripMenuItem.Name = "cepToolStripMenuItem";
-            this.cepToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.cepToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cepToolStripMenuItem.Text = "Cep";
             // 
             // toolStripSeparator7
@@ -292,19 +295,38 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelBarraVersao});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 359);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(939, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabelBarraVersao
+            // 
+            this.toolStripStatusLabelBarraVersao.Name = "toolStripStatusLabelBarraVersao";
+            this.toolStripStatusLabelBarraVersao.Size = new System.Drawing.Size(0, 17);
+            // 
             // FormMestre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 381);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMestre";
             this.Text = "Sistema Administrativo Empresarial";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMestre_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +366,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripMenuItem condiçãoDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelBarraVersao;
     }
 }

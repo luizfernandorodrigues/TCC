@@ -54,29 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\BDContexto.cs" />
-    <Compile Include="Migrations\201707062220027_inicio.cs" />
-    <Compile Include="Migrations\201707062220027_inicio.Designer.cs">
-      <DependentUpon>201707062220027_inicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707072054435_add-cidade.cs" />
-    <Compile Include="Migrations\201707072054435_add-cidade.Designer.cs">
-      <DependentUpon>201707072054435_add-cidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707101940525_ALTERAÇÕES-MODEL-A22.cs" />
-    <Compile Include="Migrations\201707101940525_ALTERAÇÕES-MODEL-A22.Designer.cs">
-      <DependentUpon>201707101940525_ALTERAÇÕES-MODEL-A22.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24.cs" />
-    <Compile Include="Migrations\201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24.Designer.cs">
-      <DependentUpon>201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707212019145_tabela-cep.cs" />
-    <Compile Include="Migrations\201707212019145_tabela-cep.Designer.cs">
-      <DependentUpon>201707212019145_tabela-cep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707212021296_table-cep.cs" />
-    <Compile Include="Migrations\201707212021296_table-cep.Designer.cs">
-      <DependentUpon>201707212021296_table-cep.cs</DependentUpon>
+    <Compile Include="Migrations\201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas.cs" />
+    <Compile Include="Migrations\201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas.Designer.cs">
+      <DependentUpon>201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,23 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707062220027_inicio.resx">
-      <DependentUpon>201707062220027_inicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707072054435_add-cidade.resx">
-      <DependentUpon>201707072054435_add-cidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707101940525_ALTERAÇÕES-MODEL-A22.resx">
-      <DependentUpon>201707101940525_ALTERAÇÕES-MODEL-A22.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24.resx">
-      <DependentUpon>201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707212019145_tabela-cep.resx">
-      <DependentUpon>201707212019145_tabela-cep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707212021296_table-cep.resx">
-      <DependentUpon>201707212021296_table-cep.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas.resx">
+      <DependentUpon>201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

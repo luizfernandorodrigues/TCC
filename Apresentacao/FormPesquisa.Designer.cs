@@ -105,14 +105,14 @@
             // codigo
             // 
             this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigo.DataPropertyName = "a22_002_c";
+            this.codigo.DataPropertyName = "codigoPais";
             this.codigo.HeaderText = "Código";
             this.codigo.Name = "codigo";
             // 
             // nome
             // 
             this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nome.DataPropertyName = "a22_001_c";
+            this.nome.DataPropertyName = "descricaoPais";
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             // 

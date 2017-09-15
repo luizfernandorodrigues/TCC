@@ -7,13 +7,13 @@ namespace Repositorio.DALL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class REFATORAÇÃOMODELA22A23A24 : IMigrationMetadata
+    public sealed partial class Refatoraçãotabeladepaismudançanosnomesdascolunas : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(REFATORAÇÃOMODELA22A23A24));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Refatoraçãotabeladepaismudançanosnomesdascolunas));
         
         string IMigrationMetadata.Id
         {
-            get { return "201707111937374_REFATORAÇÃO-MODEL-A22-A23-A24"; }
+            get { return "201709151442306_Refatoração tabela de pais, mudança nos nomes das colunas"; }
         }
         
         string IMigrationMetadata.Source

@@ -16,7 +16,7 @@ namespace Apresentacao
     {
         //variavel pra controlar se é editar ou incluir
         private int flag = 1;
-        public static List<A22> list = new List<A22>();
+        public static List<Pais> list = new List<Pais>();
         public static BindingSource navegar = new BindingSource();
         BindingSource aux = new BindingSource();
 
@@ -36,9 +36,9 @@ namespace Apresentacao
         {
             using (var repPais = new PaisRepositorio())
             {
-                A22 pais = new A22();
-                pais.a22_001_c = txtNome.Text;
-                pais.a22_002_c = txtCodigo.Text;
+                Pais pais = new Pais();
+                pais.descricaoPais = txtNome.Text;
+                pais.codigoPais = txtCodigo.Text;
 
                 //chamo a função statica que valida se o objeto esta corretamente preenchido
                 //atraves do model que foi setado os parametros
@@ -144,7 +144,7 @@ namespace Apresentacao
             Navegar(0, list);
         }
 
-        private void Navegar(int flag, List<A22> lst)
+        private void Navegar(int flag, List<Pais> lst)
         {
             if (navegar.DataSource == null)
             {
@@ -162,8 +162,8 @@ namespace Apresentacao
                     try
                     {
                         navegar.MovePrevious();
-                        txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
-                        txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
+                        txtNome.DataBindings.Add("Text", navegar, "descricaoPais");
+                        txtCodigo.DataBindings.Add("Text", navegar, "codigoPais");
                     }
                     catch (Exception ex)
                     {
@@ -184,8 +184,8 @@ namespace Apresentacao
                     try
                     {
                         navegar.MoveNext();
-                        txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
-                        txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                        txtCodigo.DataBindings.Add("Text", navegar, "codigoPais");
+                        txtNome.DataBindings.Add("Text", navegar, "descricaoPais");
                     }
                     catch (Exception ex)
                     {
@@ -199,8 +199,8 @@ namespace Apresentacao
                 try
                 {
                     navegar.MoveFirst();
-                    txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
-                    txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                    txtCodigo.DataBindings.Add("Text", navegar, "codigoPais");
+                    txtNome.DataBindings.Add("Text", navegar, "descricaoPais");
                     MessageBox.Show("Primeiro Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -214,8 +214,8 @@ namespace Apresentacao
                 try
                 {
                     navegar.MoveLast();
-                    txtCodigo.DataBindings.Add("Text", navegar, "a22_002_c");
-                    txtNome.DataBindings.Add("Text", navegar, "a22_001_c");
+                    txtCodigo.DataBindings.Add("Text", navegar, "codigoPais");
+                    txtNome.DataBindings.Add("Text", navegar, "descricaoPais");
                     MessageBox.Show("Ultimo Registro!", Util.titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -267,10 +267,10 @@ namespace Apresentacao
         {
             using (var repPais = new PaisRepositorio())
             {
-                A22 pais = new A22();
-                pais = navegar.Current as A22;
-                pais.a22_001_c = txtNome.Text;
-                pais.a22_002_c = txtCodigo.Text;
+                Pais pais = new Pais();
+                pais = navegar.Current as Pais;
+                pais.descricaoPais = txtNome.Text;
+                pais.codigoPais = txtCodigo.Text;
 
                 //chamo a função statica que valida se o objeto esta corretamente preenchido
                 //atraves do model que foi setado os parametros
@@ -288,8 +288,8 @@ namespace Apresentacao
         {
             using (var repPais = new PaisRepositorio())
             {
-                A22 pais = new A22();
-                pais = navegar.Current as A22;
+                Pais pais = new Pais();
+                pais = navegar.Current as Pais;
                 int id = pais.ukey;
                 repPais.Excluir(c => c.ukey.Equals(id));
                 repPais.SalvarTodos();

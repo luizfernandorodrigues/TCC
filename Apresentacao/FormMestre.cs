@@ -38,5 +38,10 @@ namespace Apresentacao
             }
             Application.Exit();
         }
+
+        private void FormMestre_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLabelBarraVersao.Text = "Versão 1.1.1";
+        }
     }
 }
