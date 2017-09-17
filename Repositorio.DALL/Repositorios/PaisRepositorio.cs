@@ -69,7 +69,7 @@ namespace Repositorio.DALL.Repositorios
         {
             using(var repEstado = new EstadoRepositorio())
             {
-                dados.DataSource = repEstado.Get(c => c.A22_UKEY.Equals(idPais)).ToList();
+                dados.DataSource = repEstado.Get(c => c.idPais.Equals(idPais)).ToList();
             }
         }
     }

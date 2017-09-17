@@ -146,7 +146,7 @@
             // sigla
             // 
             this.sigla.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sigla.DataPropertyName = "a23_002_c";
+            this.sigla.DataPropertyName = "siglaEstado";
             this.sigla.HeaderText = "Sigla";
             this.sigla.Name = "sigla";
             // 

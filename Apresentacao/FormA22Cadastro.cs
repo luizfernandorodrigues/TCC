@@ -290,8 +290,8 @@ namespace Apresentacao
             {
                 Pais pais = new Pais();
                 pais = navegar.Current as Pais;
-                int id = pais.ukey;
-                repPais.Excluir(c => c.ukey.Equals(id));
+                int id = pais.id;
+                repPais.Excluir(c => c.id.Equals(id));
                 repPais.SalvarTodos();
             }
 

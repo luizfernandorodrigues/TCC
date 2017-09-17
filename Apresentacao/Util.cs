@@ -142,7 +142,7 @@ namespace Apresentacao
         }
 
         /// <summary>
-        /// Metodo para gerar ukey ramdomica de tamanho 20
+        /// Metodo para gerar id ramdomica de tamanho 20
         /// </summary>
         /// <returns>senha</returns>
         public static string GerarUkey()

@@ -14,7 +14,7 @@ namespace Repositorio.Entidades
         [Key]
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ukey { get; set; }
+        public int id { get; set; }
 
         [Display (Name ="Nome")]
         [Column("descricaoPais")]
@@ -33,7 +33,7 @@ namespace Repositorio.Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime TIMESTAMP { get; set; }
 
-        public virtual ICollection<A23> estado { get; set; }
+        public virtual ICollection<Estado> estado { get; set; }
 
        
 
